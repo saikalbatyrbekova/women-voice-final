@@ -42,7 +42,11 @@ public class ProfileMapperImpl implements ProfileMapper {
     public ExpertResponse toExpertResponse(Profile profile) {
         ExpertResponse response = new ExpertResponse();
         response.setName(profile.getFullName());
-        response.setImagePath(profile.getImage().getPath());
+        if (profile.getImage() != null) {
+            response.setImagePath(profile.getImage().getPath());
+        } else {
+            response.setImagePath("default-image-url");
+        }
         response.setEducationalLevel(profile.getEducationLevel());
         return response;
     }
