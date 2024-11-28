@@ -53,10 +53,10 @@ function toggleReplies(button) {
         // Переключаем видимость блока с ответами
         if (repliesDiv.style.display === "none" || repliesDiv.style.display === "") {
             repliesDiv.style.display = "block";
-            button.textContent = "Hide Replies"; // Меняем текст кнопки
+            button.textContent = "Жооптор"; // Меняем текст кнопки
         } else {
             repliesDiv.style.display = "none";
-            button.textContent = "Show Replies"; // Меняем текст кнопки
+            button.textContent = "Жоопторду корсоттуу"; // Меняем текст кнопки
         }
     }
 }
@@ -112,7 +112,7 @@ function sendReply(button) {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
-            "Authorization": `Bearer ${token}`
+            // "Authorization": `Bearer ${token}`
         },
         body: JSON.stringify(requestData)
     })

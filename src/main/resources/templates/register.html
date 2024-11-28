@@ -17,9 +17,9 @@
     <div class="wrapper" style="background-image: url('/auth/images/bg-registration-form-2.jpg');">
         <div class="inner">
             <form th:action="@{/auth/register}" method="post" th:object="${registerRequest}">
-                <h3>Registration Form</h3>
+                <h3>Каттоо формасы</h3>
                 <div class="form-wrapper">
-                    <label>User name</label>
+                    <label>Колдонуучунун аты</label>
                     <input type="text" th:field="*{username}" class="form-control">
                 </div>
                 <div class="form-wrapper">
@@ -27,27 +27,27 @@
                     <input type="text" th:field="*{email}" class="form-control">
                 </div>
                 <div class="form-wrapper">
-                    <label>Password</label>
+                    <label>Купуя сөз</label>
                     <input type="password" th:field="*{password}" class="form-control">
                 </div>
                 <div class="form-wrapper">
-                    <label>Select Role</label>
+                    <label>Роль тандаңыз</label>
                     <select th:field="*{role}" class="form-control" required>
-                        <option value="USER">User</option>
-                        <option value="EXPERT">Expert</option>
+                        <option value="USER">Колдонуучу</option>
+                        <option value="EXPERT">Эксперт</option>
                     </select>
                 </div>
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox"> I accept the Terms of Use & Privacy Policy.
+                        <input type="checkbox"> Мен Колдонуу шарттарын жана Купуялык саясатын кабыл алам.
                         <span class="checkmark"></span>
                     </label>
                 </div>
-                <button>Register Now</button>
+                <button>Азыр катталыңыз</button>
 
                 <!-- Ссылка на страницу входа -->
                 <div style="text-align: center; margin-top: 20px;">
-                    <p>Already have an account? <a th:href="@{/pages/login}" style="color: #ae3c33; text-decoration: none;">Login here</a></p>
+                    <p>Каттоо эсебиңиз барбы?<a th:href="@{/pages/login}" style="color: #ae3c33; text-decoration: none;">Бул жерден кириңиз</a></p>
                 </div>
             </form>
         </div>
